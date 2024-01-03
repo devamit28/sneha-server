@@ -11,7 +11,7 @@ const option = {
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
   "allowedHeaders": ['Content-Type', 'Authorization']
 }
-app.use(cors());
+app.use(cors(option));
 app.use(express.json());
 
 mongoose
