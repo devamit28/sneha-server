@@ -6,7 +6,11 @@ const messageRoutes = require("./routes/messages");
 const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
-
+const option = {
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "allowedHeaders": ['Content-Type', 'Authorization']
+}
 app.use(cors());
 app.use(express.json());
 
