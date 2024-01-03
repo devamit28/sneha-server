@@ -13,7 +13,8 @@ module.exports.login = async (req, res, next) => {
     delete user.password;
     return res.json({ status: true, user });
   } catch (ex) {
-    next(ex);
+    //next(ex);
+    return res.json({ msg: "Something went wrong at login", status: false });
   }
 };
 
